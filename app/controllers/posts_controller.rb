@@ -6,7 +6,9 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
-
+  def indox
+    @posts = Post.all
+  end
   # GET /posts/1
   # GET /posts/1.json
   def show
@@ -21,7 +23,7 @@ class PostsController < ApplicationController
   # GET /posts/1/edit
   def edit
   end
-
+  
   # POST /posts
   # POST /posts.json
   def create

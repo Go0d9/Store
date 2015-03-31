@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  get 'persons/profile'
-  get 'devise/password'
-  resources :posts
+  get 'users/new'
+
   root 'posts#index'
+  resources :posts
+  get  'home' => 'posts#indox' 
+  get 'signup'  => 'users#new'
 
 end

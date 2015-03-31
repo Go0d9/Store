@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+    
+  end
   def show
     @user = User.find(params[:id])
   end
@@ -17,6 +21,13 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+   def destroy
+        User.find(params[:id]).destroy
+        flash[:success] = "USER DELETED."
+        redirect_to users_path
+    end
+
 
   private
 

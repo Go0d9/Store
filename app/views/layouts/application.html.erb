@@ -18,6 +18,10 @@
         <div class="col-xs-9"><%= yield %></div>
         <div class="col-xs-3">
           <%= render "layouts/panelgroupe" %>
+          <% flash.each do |message_type, message| %>
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          <% end %>
+      
         </div>
         </div>
       </div>

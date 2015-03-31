@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  get 'users/new'
 
-  root 'posts#index'
   resources :posts
+  root 'posts#index'
   get  'home' => 'posts#indox' 
+  resources :users
+  get 'users/show'
   get 'signup'  => 'users#new'
 
 end

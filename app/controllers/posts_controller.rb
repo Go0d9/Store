@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
-  def indox
+  def adminindex
     @posts = Post.all
   end
   # GET /posts/1

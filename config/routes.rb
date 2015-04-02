@@ -4,9 +4,8 @@ Rails.application.routes.draw do
 
   resources :posts
   root 'posts#index'
-  get  'home' => 'posts#indox' 
+  get  'admin'=>  'posts#adminindex'
   resources :users
-  get 'users/show'
   get 'signup'  => 'users#new'
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
